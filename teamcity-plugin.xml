@@ -2,14 +2,14 @@
 <teamcity-plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:noNamespaceSchemaLocation="urn:shemas-jetbrains-com:teamcity-plugin-v1-xml">
     <info>
-        <name>gerrit-trigger</name>
-        <display-name>Gerrit trigger</display-name>
+        <name>gerrit-async-trigger</name>
+        <display-name>Gerrit Async Trigger</display-name>
         <version>@Version@</version>
         <description>Triggers builds based on events from Gerrit</description>
         <vendor>
-            <name>Saulis</name>
-            <url>http://www.github.com/Saulis/</url>
+            <name>Team Continuous, based on http://www.github.com/Saulis/</name>
+            <url>https://gitlab.ci.demant.com/teamtc/teamcity-plugins/-/tree/main/teamcity-gerrit-trigger</url>
         </vendor>
     </info>
-    <deployment use-separate-classloader="false"/>
+    <deployment use-separate-classloader="true"/>
 </teamcity-plugin>

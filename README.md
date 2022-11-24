@@ -1,3 +1,5 @@
+Expanded from source: https://github.com/Saulis/teamcity-gerrit-trigger
+
 teamcity-gerrit-trigger
 =======================
 
@@ -10,6 +12,7 @@ Plugin for Teamcity which polls Gerrit to trigger builds
 
 #### Building
 
+- Run getApacheMaven.bat for a one time setup of Apache Maven. (only for Winblows)
 - Run mvn package to create a zip file which you can drop under the plugins folder in your Teamcity server.
 
 #### Usage
@@ -19,6 +22,9 @@ Plugin for Teamcity which polls Gerrit to trigger builds
   - Host: hostname of your Gerrit instance in the form dev.gerrit.com (uses default port 29418, custom ports not supported)
   - Username: SSH username that will be used to open connection (optional, default: the username that runs Teamcity)
   - Custom private key: Full path to the private key you want to use (optional, default: default private key of user)
-  - Passphrase: Passphrase for the private key (optional)
+  - Host Connection Timeout Seconds: The number of seconds that the trigger waits for Gerrit to finish answering
+  - Trigger Poll Interval Seconds: The polling Interval
+  - Gerrit Review Query Limit: The maximum number of expected patchsets that can appear in between two polling intervals.
   - Project: Filter for querying patchsets (optional)
   - Branch: Filter for querying patchsets (optional)
+  - Queue as Personal Build: Will the trigger create "normal" or personal builds in TeamCity. Mostly Applicable for testing purposes in our case!
